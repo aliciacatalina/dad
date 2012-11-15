@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dad</title>
+  <title>Kudyn</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "application", "jquery-1.8.2.min.js", "highcharts" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand">DAD</a>
+        <% if user_signed_in? %>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><%= link_to "Inicio", root_path %></li>
+              <ul class="nav">
+                <li><%= link_to "Cerrar sesión", destroy_user_session_path, :method => :delete %></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-<%= yield %>
-
+  <div class="container">
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, :id => "flash_#{name}", class: 'alert alert-block' %>
+    <% end %>
+    <div class="span9">
+      <%= yield %>
+    </div>
+  </div>
 </body>
 </html>
+
