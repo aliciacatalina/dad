@@ -1,8 +1,13 @@
 Dad::Application.routes.draw do
-  devise_for :articles
+  devise_for :article
+   devise_for :users
 
-  devise_for :users
+  get "home/index"
 
+  root :to => 'home#index'
+end
+
+ 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -52,11 +57,11 @@ Dad::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  # root :to => ''
 
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
-end
+
