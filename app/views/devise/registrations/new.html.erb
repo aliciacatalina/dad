@@ -1,7 +1,19 @@
-<h2>Sign up</h2>
+<div>
+<div class="hero-especial">
+<h1>Bienvenido a DAD</h1>
+<h2>Registrar</h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
+
+  <div><%= f.label :name %><br />
+  <%= f.text_field :name %></div>
+
+  <div><%= f.label :lastname %><br />
+  <%= f.text_field :lastname %></div>
+
+  <div><%= f.label :phone %><br />
+  <%= f.phone_field :phone %></div>
 
   <div><%= f.label :email %><br />
   <%= f.email_field :email %></div>
@@ -12,7 +24,7 @@
   <div><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.submit "Sign up" %></div>
+  <div><%= f.submit "Registrar" %></div>
 <% end %>
 
 <%= render "devise/shared/links" %>

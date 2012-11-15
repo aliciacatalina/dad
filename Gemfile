@@ -25,4 +25,4 @@ gem "cucumber-rails", ">= 1.3.0", :group => :test, :require => false
 gem "capybara", ">= 1.1.2", :group => :test
 gem "database_cleaner", ">= 0.7.2", :group => :test
 gem "launchy", ">= 2.1.0", :group => :test
-gem "bootstrap-sass", ">= 2.1.0.0"
+gem "bootstrap-sass"
