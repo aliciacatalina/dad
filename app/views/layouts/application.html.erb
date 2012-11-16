@@ -17,6 +17,8 @@
               <li><%= link_to "Inicio", root_path %></li>
               <ul class="nav">
                 <li><%= link_to "Cerrar sesión", destroy_user_session_path, :method => :delete %></li>
+                 <ul class="nav">
+              <li><%= link_to "Articulos", new_article_registration_path %></li>
               </ul>
             </div><!--/.nav-collapse -->
         <% end %>
