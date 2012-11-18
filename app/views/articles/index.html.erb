@@ -1,0 +1,22 @@
+
+<h1>Articulos</h1>
+
+<p><%= link_to 'Crear nuevo articulo', new_article_path, class: 'btn btn-primary' %></p>
+
+<table class="table">
+  <tr>
+    <th>Nombre</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @articles.each do |article| %>
+  <tr>
+        <td><%= link_to article.name, article_path(article) %></td>
+      <td><%= link_to 'Editar', edit_article_path(article) %></td>
+      <td><%= link_to 'Eliminar', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+  </tr>
+<% end %>
+</table>

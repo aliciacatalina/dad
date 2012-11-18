@@ -1,6 +1,8 @@
 Dad::Application.routes.draw do
-  devise_for :article
-   devise_for :users
+
+  resources :articles
+
+  devise_for :users
 
   get "home/index"
 
