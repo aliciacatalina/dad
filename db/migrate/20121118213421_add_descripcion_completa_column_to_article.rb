@@ -1,4 +1,4 @@
-class AddDescripcionCColumnToArticle < ActiveRecord::Migration
+class AddDescripcionCompletaColumnToArticle < ActiveRecord::Migration
   def change
     add_column :articles, :descripcionCompleta, :string
   end
