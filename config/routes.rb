@@ -1,11 +1,6 @@
 Dad::Application.routes.draw do
-  get "articles/index"
-  get "articles/new"
-  get "articles/form"
-  post "articles/form"
-
   devise_for :article
-  devise_for :users
+   devise_for :users
 
   get "home/index"
 
